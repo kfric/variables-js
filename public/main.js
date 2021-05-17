@@ -145,7 +145,7 @@ function main() {
       smallest = numbers[i]
     }
   }
-  console.log(smallest)
+  // console.log(smallest)
   // console.log(Math.min(...numbers))
 
   // find the largest number in numbers
@@ -155,7 +155,7 @@ function main() {
       largest = numbers[i]
     }
   }
-  console.log(largest)
+  // console.log(largest)
   // console.log(Math.max(...numbers))
 
   // add up the entire array of numbers
@@ -163,7 +163,7 @@ function main() {
   for (let i = 0; i < numbers.length; i++) {
     arraySum += numbers[i]
   }
-  console.log(arraySum)
+  // console.log(arraySum)
 
   // find the average of the array numbers
   // let arraySum = 0
@@ -171,15 +171,16 @@ function main() {
   //   arraySum += numbers[i]
   // }
   average = arraySum / numbers.length
-  console.log(average)
+  // console.log(average)
 
-  const stats = {
-    smallest: `${smallest}`,
-    largest: `${largest}`,
-    sun: `${arraySum}`,
-    average: `${average}`,
-  }
   // Create an object called stats with the following properties
+  const stats = {
+    smallest: smallest,
+    largest: largest,
+    sum: arraySum,
+    average: average,
+  }
+  console.log(stats)
 }
 
 document.addEventListener('DOMContentLoaded', main)
