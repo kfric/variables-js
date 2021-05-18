@@ -1,39 +1,39 @@
 function main() {
   // Practice Creating Variables
 
-  // const numberOfCupsOfCoffee = 1
-  // const fullName = 'Karl Frick'
-  // console.log(
-  //   `${fullName} drinks about ${numberOfCupsOfCoffee} cup[s] of coffee per day`
-  // )
-  // const aboutMe = {
-  //   fullName: 'Karl Frick',
-  //   luckyNumber: 5,
-  //   favoriteMovies: ['Tenet', 'King Kong', 'Mortal Kombat'],
-  // }
+  const numberOfCupsOfCoffee = 1
+  const fullName = 'Karl Frick'
+  console.log(
+    `${fullName} drinks about ${numberOfCupsOfCoffee} cup[s] of coffee per day`
+  )
+  const aboutMe = {
+    fullName: 'Karl Frick',
+    luckyNumber: 5,
+    favoriteMovies: ['Tenet', 'King Kong', 'Mortal Kombat'],
+  }
   // Practice Getting Input From the User
 
-  // let userName = prompt('What is your name')
-  // console.log(`Welcome to JavaScript, ${userName}`)
+  let userName = prompt('What is your name')
+  console.log(`Welcome to JavaScript, ${userName}`)
 
   // Converting String Input Into Numbers
 
-  // const firstOperand = parseFloat(window.prompt('Input a number'))
-  // const secondOperand = parseFloat(window.prompt('Input another number'))
+  const firstOperand = parseFloat(window.prompt('Input a number'))
+  const secondOperand = parseFloat(window.prompt('Input another number'))
 
   // Doing Math
 
-  // const sum = firstOperand + secondOperand
-  // const difference = secondOperand - firstOperand
-  // const product = firstOperand * secondOperand
-  // const quotient = secondOperand / firstOperand
-  // const remainder = firstOperand % secondOperand
+  const sum = firstOperand + secondOperand
+  const difference = secondOperand - firstOperand
+  const product = firstOperand * secondOperand
+  const quotient = secondOperand / firstOperand
+  const remainder = firstOperand % secondOperand
 
-  // console.log(`${firstOperand} + ${secondOperand} = ${sum}`)
-  // console.log(`${secondOperand} - ${firstOperand} = ${difference}`)
-  // console.log(`${firstOperand} * ${secondOperand} = ${product}`)
-  // console.log(`${secondOperand} / ${firstOperand} = ${quotient}`)
-  // console.log(`${firstOperand} % ${secondOperand} = ${remainder}`)
+  console.log(`${firstOperand} + ${secondOperand} = ${sum}`)
+  console.log(`${secondOperand} - ${firstOperand} = ${difference}`)
+  console.log(`${firstOperand} * ${secondOperand} = ${product}`)
+  console.log(`${secondOperand} / ${firstOperand} = ${quotient}`)
+  console.log(`${firstOperand} % ${secondOperand} = ${remainder}`)
 
   // Using numbersays
   const numbers = [
@@ -145,8 +145,8 @@ function main() {
       smallest = numbers[i]
     }
   }
-  // console.log(smallest)
-  // console.log(Math.min(...numbers))
+  console.log(smallest)
+  console.log(Math.min(...numbers))
 
   // find the largest number in numbers
   let largest = numbers[0]
@@ -155,23 +155,30 @@ function main() {
       largest = numbers[i]
     }
   }
-  // console.log(largest)
-  // console.log(Math.max(...numbers))
+  console.log(largest)
+  console.log(Math.max(...numbers))
 
   // add up the entire array of numbers
-  let arraySum = 0
-  for (let i = 0; i < numbers.length; i++) {
-    arraySum += numbers[i]
-  }
-  // console.log(arraySum)
 
-  // find the average of the array numbers
+  /* this was commented out so that the average code works.
+  I rewrote the entire line to show how to get the average from
+  start to finish */
+
   // let arraySum = 0
   // for (let i = 0; i < numbers.length; i++) {
   //   arraySum += numbers[i]
   // }
+  // console.log(arraySum)
+
+  // find the average of the array numbers
+  // also finds the sum of the array
+  let arraySum = 0
+  for (let i = 0; i < numbers.length; i++) {
+    arraySum += numbers[i]
+  }
   average = arraySum / numbers.length
-  // console.log(average)
+  console.log(arraySum)
+  console.log(average)
 
   // Create an object called stats with the following properties
   const stats = {
@@ -181,6 +188,21 @@ function main() {
     average: average,
   }
   console.log(stats)
+
+  // adventure mode
+
+  // get the sumOfOdds
+  let sumOfOdds = 0
+  let listOfOdd = numbers.filter(num => num % 2 !== 0)
+  for (let i = 0; i < listOfOdd.length; i++) {
+    sumOfOdds += listOfOdd[i]
+  }
+  console.log(sumOfOdds)
+
+  // get the countOfEven
+  let countOfEven = numbers.filter(num => num % 2 === 0).length
+  console.log(countOfEven)
+  // for (let i = 0; i < countOfEven.length; i++)
 }
 
 document.addEventListener('DOMContentLoaded', main)
